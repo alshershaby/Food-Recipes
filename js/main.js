@@ -1,45 +1,24 @@
 $(document).ready(function(){
     // start side bar code 
-$('#aboutUs').hover(
-    function(){
-    $('#sideAboutContent').fadeIn(400);
-    },function(){
-        $('#sideAboutContent').fadeOut(200);
-    }
-)
 
-$('#contactUs').hover(
-    function(){
-    $('#sideContactContent').fadeIn(400);
-    },function(){
-        $('#sideContactContent').fadeOut(200);
-    }
-)
 
-$('#findUs').hover(
-    function(){
-    $('#findUsContent').fadeIn(400);
-    },function(){
-        $('#findUsContent').fadeOut(200);
-    }
-)
 
+function sideHide(icon,content){
+    $('.page').click( ()=> content.removeClass('openIt'))
+    icon.click( ()=>{
+        if( content.hasClass('openIt') ){
+            content.removeClass('openIt')
+        }else{
+            content.addClass('openIt').siblings().removeClass('openIt')
+        }
+    } )
+}
+
+sideHide( $('#aboutUs'), $('#sideAboutContent') );
+sideHide( $('#contactUs'), $('#sideContactContent') );
+sideHide( $('#findUs'), $('#findUsContent') );
     // end side bar code 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 let allRows = [];
@@ -49,8 +28,8 @@ httpRequ.send();
 
 
 httpRequ.addEventListener('readystatechange',function(){
-if(httpRequ.readyState == 4){
+if(httpRequ.readyState == 4 && httpRequ.status == 200){
     console.log(
-allRows= JSON.parse( httpRequ.response).count);
+    allRows= JSON.parse( httpRequ.response).recipes);
 }
 });

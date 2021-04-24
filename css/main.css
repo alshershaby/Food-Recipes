@@ -117,12 +117,18 @@
   display: none;
 }
 
+.sideAboutContent.openIt,
+.sideContactContent.openIt,
+.findUsContent.openIt {
+  display: block;
+}
+
 .sideAboutContent .arrowLead {
   position: absolute;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  left: -7.5px;
+  left: -9px;
   top: 18px;
   background: #fff;
   transform: rotate(45deg);
@@ -174,7 +180,7 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  left: -7.5px;
+  left: -9px;
   top: 40%;
   background: #fff;
   transform: rotate(45deg);
@@ -196,6 +202,7 @@
   position: fixed;
   left: 100px;
   top: 42%;
+  padding: 10px;
   color: rgba(255, 157, 66, 0.993);
   width: 300px;
   height: 200px;
@@ -204,7 +211,7 @@
   background: rgb(24, 23, 23);
   border-radius: 10px;
   text-transform: capitalize;
-  box-shadow: 0 0 17px currentColor;
+  box-shadow: 0 0 7px currentColor;
   display: flex;
   align-items: center;
   display: none;
@@ -224,7 +231,7 @@ iframe {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  left: -7.5px;
+  left: -9px;
   top: 64%;
   background: #fff;
   transform: rotate(45deg);
