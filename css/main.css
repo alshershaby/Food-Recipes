@@ -5,6 +5,9 @@
   width: 100%;
 }
 
+body {
+  overflow: hidden;
+}
 /* start titel  */
 .title,
 .title:hover {
@@ -136,7 +139,7 @@
 
 .formHolder {
   height: 85vh;
-  background-color: rgb(41, 22, 13);
+  background-color: rgb(26, 18, 15);
   position: absolute;
   top: 0;
   left: 12.5%;
@@ -352,7 +355,7 @@ iframe {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.781);
+  background-color: rgba(0, 0, 0, 0.932);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -369,6 +372,7 @@ iframe {
   bottom: 0;
   width: 100%;
   text-transform: capitalize;
+  z-index: 200;
 }
 .bottomBar .btn {
   background-color: rgb(24, 23, 23);
@@ -397,3 +401,99 @@ iframe {
 }
 
 /* end landing page style  */
+
+/* start search Section  */
+
+.searchSection {
+  z-index: 400;
+  color: rgb(255, 157, 66);
+  display: none;
+}
+
+.searchHolder {
+  z-index: 10;
+  margin: auto;
+  width: 50%;
+  position: fixed;
+  top: 0;
+  left: 25%;
+}
+
+.hangLine {
+  height: 70px;
+  width: 3px;
+  background: #ddd;
+  margin: auto;
+}
+
+.searchInpput {
+  background-image: url("../images/woodenBg.jpg");
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0 0 7px #fff;
+}
+
+.searchOutPut {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow-y: scroll;
+}
+
+.searchOutPut::-webkit-scrollbar {
+  background-color: rgb(24, 23, 23);
+  width: 10px;
+}
+
+.searchOutPut::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 157, 66);
+  border-radius: 5px;
+}
+.imgHolder {
+  width: 140px;
+  height: 100%;
+  border-radius: 10px;
+}
+.imgHolder img {
+  border-radius: 10px;
+  box-shadow: 0 0 7px;
+}
+/* end search Section  */
+
+/* start recippes api section  */
+.recipesByApi {
+  color: rgb(255, 157, 66);
+  display: none;
+  font-family: "Pacifico", cursive;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+}
+
+.apiRecipesContainer {
+  height: 60vh;
+}
+.apiRecipesContainer .container-fluid {
+  height: 100%;
+}
+.apiRecipesContainer .container-fluid .row {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.apiRecipesContainer .row::-webkit-scrollbar {
+  background-color: rgb(238, 233, 230);
+  width: 10px;
+  border-radius: 10px;
+  height: 100%;
+}
+.apiRecipesContainer .row::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 157, 66);
+  border-radius: 10px;
+}
+/* end  recippes api section  */
