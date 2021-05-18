@@ -39,6 +39,7 @@ $('#closeSign').click( ()=>{
         $("#viewAllRecipes").removeClass("active");
         $("#searchSection").fadeOut(400);
         $("#recipesByApi").fadeOut(400);
+        $("#addRecipesSection").fadeOut(400);
         $("#overLanding").fadeOut(400,()=>{
         $("#closeSign").fadeOut(400,()=>{
             $("#joinBtn").fadeIn(400);
@@ -73,6 +74,7 @@ function sideHide(icon,content){
             content.removeClass('openIt');
         }else{
             content.addClass('openIt').siblings().removeClass('openIt')
+            $('.sideIcon2').removeClass('openIt');
         }
     } )
 }
@@ -80,7 +82,19 @@ function sideHide(icon,content){
 sideHide( $('#aboutUs'), $('#sideAboutContent') );
 sideHide( $('#contactUs'), $('#sideContactContent') );
 sideHide( $('#findUs'), $('#findUsContent') );
-    // end side bar code 
+    
+
+$("#scoialLinks").click( ()=>{
+    $('.page').click( ()=> $('.sideIcon2').removeClass('openIt'))
+    if( $('.sideIcon2').hasClass('openIt') ){
+        $('.sideIcon2').removeClass('openIt')
+    }else{
+        $('.sideIcon2').addClass('openIt');
+     $('.sideBar2').siblings().removeClass('openIt')
+    }
+})
+
+// end side bar code 
 
 
     // start search functions 
@@ -121,35 +135,72 @@ sideHide( $('#findUs'), $('#findUsContent') );
     } )
 
 
+
+
     // end recipes by api 
 
+
+// start add recipe 
+$("#addRecipeBtn").click( ()=>{
+    $("#addRecipesSection").siblings().fadeOut(400,()=>{
+    $("#addRecipeBtn").addClass("active");
+    $("#addRecipeBtn").siblings().removeClass("active");
+    $("#overLanding").fadeIn(700,()=>{
+     $("#addRecipesSection").fadeIn(400,()=>{
+        $("#joinBtn").fadeOut(400,()=>{
+            $("#closeSign").fadeIn(400);
+            $("#switcher").fadeOut(400);
+        })
+     });   
+    });
+
+    });
+} )
+
+
+
+
+// end add recipe 
+
 });
 
 
-let allRows = [];
-let httpRequ =new XMLHttpRequest();
+
+
+
+
+let allRecipes = [];
 let apiAllRecipes = document.getElementById("apiAllRecipes");
-httpRequ.open('GET','http://forkify-api.herokuapp.com/api/search?&q=pasta');
-httpRequ.send();
-let recippesContainer=``;
 
-
-httpRequ.addEventListener('readystatechange',function(){
-if(httpRequ.readyState == 4 && httpRequ.status == 200){
-    allRows= JSON.parse(httpRequ.response).recipes;
-    displayRecipes();
+async function getRecipe(){
+let apiResponse =   await fetch('http://forkify-api.herokuapp.com/api/search?&q=pasta');
+     apiResponse = await apiResponse.json();
+    allRecipes = apiResponse.recipes;
+    displayAllRecipes();
 }
-});
 
-function displayRecipes(){
-    for(let i=0;i< allRows.length; i++){
-        recippesContainer +=`
-         <div class="col-md-3 recipe p-3">
-            <img class="img-fluid rounded" src="${allRows[i].image_url}" alt="">
-        </div>`
+ function displayAllRecipes(){
+    container = ``;
+    for( let i=0; i< allRecipes.length;i++ ){
+        container+=`
+        <div class="col-md-3 p-4 recipe">
+        <img src="${allRecipes[i].image_url}" class="img-fluid recipe_img">
+        <div class="overImage p-4">
+        ${allRecipes[i].title}
+        </div>
+        </div>
+        `
     }
-    apiAllRecipes.innerHTML=recippesContainer;
+    apiAllRecipes.innerHTML = container;
+    
 }
 
+getRecipe();
 
 
+
+
+// star searching 
+
+
+// end searching 

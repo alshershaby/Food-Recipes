@@ -107,6 +107,29 @@
         </div>
     </div>
 
+
+    <div  class="scoialLinks">
+        <div id="scoialLinks" class="sideIcon">
+            <i class="fas fa-share-alt"></i>
+        </div>
+        
+    </div>
+    
+    <div class="sideBar2">
+        <div id="fb"  class="sideIcon2">
+            <i class="fab fa-facebook-f"></i>       
+         </div>
+  
+        <div id="twtr"  class="sideIcon2">
+            <i class="fab fa-twitter"></i>       
+         </div>
+    
+        <div id="inst" class="sideIcon2">
+            <i class="fab fa-instagram"></i>
+         </div>
+  
+</div>
+
 </div>
 
 
@@ -277,7 +300,7 @@
       
         <div class="searchInpput d-flex justify-content-center align-items-center p-5">
             <div class="form-group w-100">
-                <input type="text" placeholder="Search: Pasta , Pizza ..." class="form-control w-100">
+                <input id="searchInput" type="text" placeholder="Search: Pasta , Pizza ..." class="form-control w-100">
             </div>
         </div>
 
@@ -290,52 +313,20 @@
 
     <div class="recipeSearcher px-5 py-3">
         <div class="container ">
-            <div class="row ">
+            <div id="searchOutPut" class="row ">
 
-                <div class="imgHolder col-md-3">
+                <!-- <div class="imgHolder col-md-3">
                     <img class="img-fluid" src="images/test.jpg" alt="">
                 </div>
 
                 <div class="recipeDetails col-md-9">
                     <h5>Recipe Title</h5>
                     <p class="text-light">Recipe Details:</p>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
 
-    <div class="recipeSearcher p-5">
-        <div class="container ">
-            <div class="row ">
-
-                <div class="imgHolder col-md-3">
-                    <img class="img-fluid" src="images/test.jpg" alt="">
-                </div>
-
-                <div class="recipeDetails col-md-9">
-                    <h5>Recipe Title</h5>
-                    <p class="text-light">Recipe Details:</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="recipeSearcher p-5">
-        <div class="container ">
-            <div class="row ">
-
-                <div class="imgHolder col-md-3">
-                    <img class="img-fluid" src="images/test.jpg" alt="">
-                </div>
-
-                <div class="recipeDetails col-md-9">
-                    <h5>Recipe Title</h5>
-                    <p class="text-light">Recipe Details:</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    
 
 </div>
 
@@ -369,13 +360,88 @@
 
 <!-- add recipes section  -->
 
-<div class="recipesSection">
+<div id="addRecipesSection" class="addRecipesSection">
 
     <div class="container">
-        <div class="row">
-            <div class="addImgRecipe">
-
+        <h3 class="text-center text-light p-5">Add Recipe</h3>
+        <div class="row p-2 justify-content-around">
+          <div class="col-md-4">
+    
+            <div class="addImgRecipe rounded">
+                <i class="fas fa-hotdog"></i>
+                
+                <div class="addImgBtn">
+                    <i class="fas fa-camera"></i>
+                </div>
             </div>
+
+            <div class="recipeCategories my-5">
+                <h3 class="text-light py-3">Categories</h3>
+                
+                <div class="cat">
+                    <p>healthy</p>
+                </div>
+                <div class="cat">
+                    <p>pasta</p>
+                </div>
+                <div class="cat">
+                    <p>pizza</p>
+                </div>
+              
+                <div id="addCat" class="addCat">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+    
+        </div>
+
+            <div class=" col-md-8 recipeData">
+                <form action="">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <input placeholder="title *" type="text" class="form-control">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <input placeholder="added by *" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input placeholder="ingredient 1*" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input placeholder="ingredient 2 *" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input placeholder="ingredient 3 *" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input placeholder="ingredient 4 *" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input placeholder="ingredient 5" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input placeholder="ingredient 6" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input placeholder="ingredient 7" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input placeholder="ingredient 8" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input placeholder="ingredient 9" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input placeholder="ingredient 10" type="text" class="form-control">
+                    </div>
+
+                    <button class="recipeAdder mx-3 btn btn-success">add recipe</button>
+                </div>
+                
+                </form>
+            </div>
+
         </div>
     </div>
 </div>

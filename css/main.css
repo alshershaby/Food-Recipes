@@ -165,10 +165,11 @@ input[type="submit"] {
 .sideBar {
   position: fixed;
   left: 0;
-  top: 40%;
+  top: 35%;
 }
 
-.sideIcon {
+.sideIcon,
+.sideIcon2 {
   margin: 20px 10px;
   color: #fff;
   background-color: rgb(24, 23, 23);
@@ -183,15 +184,31 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+.sideBar2 {
+  position: fixed;
+  left: 4%;
+  top: 61.5%;
+  display: flex;
+}
+
+.sideIcon2.openIt {
+  display: flex;
+}
+
 .sideIcon:hover,
+.sideIcon2:hover,
 .sideIcon.active {
   color: rgba(255, 157, 66, 0.856);
+}
+
+.sideIcon2 {
+  display: none;
 }
 
 .sideAboutContent {
   position: fixed;
   left: 100px;
-  top: 42%;
+  top: 37%;
   color: rgba(255, 157, 66, 0.993);
   width: 250px;
   height: 180px;
@@ -239,7 +256,7 @@ input[type="submit"] {
 .sideContactContent {
   position: fixed;
   left: 100px;
-  top: 42%;
+  top: 37%;
   color: rgba(255, 157, 66, 0.993);
   width: 280px;
   height: 180px;
@@ -292,7 +309,7 @@ input[type="submit"] {
 .findUsContent {
   position: fixed;
   left: 100px;
-  top: 42%;
+  top: 37%;
   padding: 10px;
   color: rgba(255, 157, 66, 0.993);
   width: 300px;
@@ -444,7 +461,7 @@ iframe {
 }
 
 .searchOutPut::-webkit-scrollbar {
-  background-color: rgb(24, 23, 23);
+  background-color: rgb(26, 25, 24);
   width: 10px;
 }
 
@@ -476,7 +493,7 @@ iframe {
 }
 
 .apiRecipesContainer {
-  height: 60vh;
+  height: 70vh;
 }
 .apiRecipesContainer .container-fluid {
   height: 100%;
@@ -487,7 +504,7 @@ iframe {
 }
 
 .apiRecipesContainer .row::-webkit-scrollbar {
-  background-color: rgb(238, 233, 230);
+  background-color: rgb(26, 25, 24);
   width: 10px;
   border-radius: 10px;
   height: 100%;
@@ -496,4 +513,128 @@ iframe {
   background-color: rgb(255, 157, 66);
   border-radius: 10px;
 }
+
+.recipe {
+  max-height: 170px;
+  overflow: hidden;
+  border-radius: 10px !important;
+  transition: 0.5s;
+}
+
+.recipe_img {
+  width: 100%;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 10px !important;
+}
+
+.recipe:hover .recipe_img {
+  box-shadow: 0 0px 15px #ddd;
+  opacity: 0.2;
+}
+
+.overImage {
+  font-size: 20px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  text-transform: capitalize;
+  display: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: wrap;
+}
+
+.recipe:hover .overImage {
+  display: flex;
+}
 /* end  recippes api section  */
+
+/* addRecipeSection  */
+.addRecipesSection {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.addRecipesSection .row,
+.addRecipesSection .container {
+  width: 100%;
+  height: 100%;
+}
+.addRecipesSection h3 {
+  font-family: "Pacifico", cursive;
+}
+.addImgRecipe {
+  background: rgb(255, 255, 255);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+.addImgRecipe .fa-hotdog {
+  font-size: 100px;
+}
+
+.addImgBtn {
+  cursor: pointer;
+  width: 100%;
+  position: absolute;
+  top: 97%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 157, 66);
+  padding: 10px;
+  border-radius: 0 0 4px 4px;
+}
+.addImgBtn input {
+  width: 100%;
+}
+
+.recipeData input::placeholder {
+  font-family: "Pacifico", cursive;
+  text-transform: capitalize;
+}
+
+.recipeCategories {
+  position: relative;
+}
+.cat,
+.addCat {
+  display: inline-block;
+}
+.cat p,
+.addCat {
+  text-transform: capitalize;
+  background: rgb(255, 157, 66);
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  padding: 5px 7px;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.recipeAdder {
+  text-transform: capitalize;
+}
+.addCat {
+  background: rgb(100, 100, 100);
+}
+/* endAddRecipeSection  */
