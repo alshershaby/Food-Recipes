@@ -276,7 +276,7 @@
                 <p class="m-0"> added recipes<i class="fas fa-hamburger"></i></p>
             </div>
          
-            <div id="profile" class="btn profile">
+            <div id="profileBtn" class="btn profile">
                 <p class="m-0"> profile <i class="fas fa-user"></i></p>
             </div>
         </div>
@@ -364,8 +364,10 @@
 
     <div class="container">
         <h3 class="text-center text-light p-5">Add Recipe</h3>
+     
         <div class="row p-2 justify-content-around">
-          <div class="col-md-4">
+  
+         <div class="col-md-4">
     
             <div class="addImgRecipe rounded">
                 <i class="fas fa-hotdog"></i>
@@ -395,7 +397,7 @@
     
         </div>
 
-            <div class=" col-md-8 recipeData">
+        <div class=" col-md-8 recipeData">
                 <form action="">
                 <div class="row">
                     <div class="form-group col-md-6">
@@ -440,13 +442,144 @@
                 </div>
                 
                 </form>
-            </div>
+        </div>
 
         </div>
     </div>
 </div>
 
 <!-- end add recipes  -->
+
+
+<!-- start showing added recipes by users  -->
+<div id="usersAddedRecipesSection" class="usersAddedRecipesSection py-5 w-100">
+    <h3 class="p-5"> Recipes Added By Users</h3>    
+    <div class="container w-100">
+        <div class="row w-100">
+    
+      <div class="addRecipeByUserBtn ">
+        <i class="fas fa-plus"></i>
+      </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+<!-- end showing added recipes by users  -->
+
+
+<!-- start profile  -->
+<div id="profileSection" class="profileSection">
+    
+    <div class="container-fluid">
+        <div class="row p-5">
+            
+            <div id="profileLinksSwitcher" class="col-md-3 pl-5 ">
+            
+                <div class="profileImg  text-center">
+                    <i class="fas fa-user"></i>
+
+                    <div class="addProfilePage py-2">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+
+                <div class="profileLinksSwitcher">
+                    <ul>
+                        <li id="profiler" class="active">profile</li>
+                        <li id="favoriter">favorites</li>
+                        <li id="myReciper">my recipes</li>
+                        <li>log out</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div id="profileFullContent" class="profileFullContent col-md-9 pb-5 px-5 pt-4">
+            
+                <div id="profileData" class=" profileData">
+
+                        <h3 class="pb-5">profile</h3>
+                        <form action="" class="w-75">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input placeholder="First Name" type="text" class="form-control">
+                            </div>
+                        
+                            <div class="form-group col-md-6">
+                                <input placeholder="Last Name" type="text" class="form-control">
+                            </div>
+                        
+                            <div class="form-group col-md-12">
+                                <input placeholder="Email" type="email" class="form-control">
+                            </div>
+                        
+                            <div class="form-group col-md-12">
+                                <input placeholder="Mobile" type="text" class="form-control">
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <input placeholder="Country" type="text" class="form-control">
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <input placeholder="Adress" type="adress" class="form-control">
+                            </div>
+                        </div>
+
+                    <button class="btn btn-info px-5">Save</button>
+
+                        </form>
+
+                </div>
+
+                <div id="profileFavorites" class=" profileFavorites">
+                    <h3 class="pb-5">Favorite Recipes</h3>
+
+                    <div class="profileFavoriteRecipes w-75">
+                    <div class="container">
+                        <div class="row">
+                            <div class="ProfileAddFavorites ">
+                                <i class="fas fa-plus"></i>
+                            </div>
+        
+                        </div>
+                    </div>
+                    
+                    </div>
+
+                </div>
+
+
+                <div id="recipesAddedByme" class="recipesAddedByme">
+                    <h3 class="pb-5">Recipes added by me</h3>
+
+                    <div class="profileRecipesAdded w-75">
+                    <div class="container">
+                        <div class="row">
+                            <div class="ProfileAddFavorites ">
+                                <i class="fas fa-plus"></i>
+                            </div>
+        
+                        </div>
+                    </div>
+                    
+                    </div>
+
+                </div>
+
+          
+            </div>
+    </div>
+
+</div>
+
+<!-- end profile  -->
+
+
 
 </div>
 <!-- end apearing sections  -->

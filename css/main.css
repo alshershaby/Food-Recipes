@@ -372,7 +372,7 @@ iframe {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.932);
+  background-color: rgba(0, 0, 0, 0.973);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -638,3 +638,156 @@ iframe {
   background: rgb(100, 100, 100);
 }
 /* endAddRecipeSection  */
+
+/* start showing added recipes section  */
+.usersAddedRecipesSection {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  justify-content: center;
+  font-family: "Pacifico", cursive;
+  text-transform: capitalize;
+  display: none;
+}
+
+.usersAddedRecipesSection h3 {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.userRecipes h3 {
+  color: #fff;
+  text-align: center;
+}
+
+.addRecipeByUserBtn {
+  margin: auto;
+  background: rgba(100, 100, 100, 0.473);
+  color: #ddd;
+  font-size: 30px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* end showing added recipes section  */
+
+/* start profile section  */
+
+.profileFullContent {
+  width: 100%;
+  height: 100%;
+}
+/* start profileProfile  */
+.profileSection {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.profileImg {
+  font-size: 50px;
+  background: rgb(255, 255, 255);
+  width: 180px;
+  height: 160px;
+  border-radius: 5px 5px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.addProfilePage {
+  position: absolute;
+  background: rgb(255, 157, 66);
+  top: 95%;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 0 0 5px 5px;
+}
+
+.profileLinksSwitcher {
+  margin-top: 50px;
+}
+
+.profileLinksSwitcher ul {
+  list-style: none;
+  padding: 0;
+  width: 180px;
+}
+
+.profileLinksSwitcher ul li {
+  color: #fff;
+  text-transform: capitalize;
+  padding: 5px 0px;
+  margin: 20px 5px;
+  border: solid 2px rgb(255, 157, 66);
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.profileLinksSwitcher ul li:hover,
+.profileLinksSwitcher ul li.active {
+  background: rgb(255, 157, 66);
+}
+.profileData h3 {
+  font-family: "Pacifico", cursive;
+  text-transform: capitalize;
+  color: #fff;
+  text-align: center;
+  width: 75%;
+}
+
+/* start profile favorites */
+.profileFavorites {
+  display: none;
+}
+.profileFavorites h3 {
+  font-family: "Pacifico", cursive;
+  text-transform: capitalize;
+  color: #fff;
+  text-align: center;
+  width: 75%;
+}
+
+.ProfileAddFavorites {
+  background: rgba(100, 100, 100, 0.473);
+  color: #ddd;
+  font-size: 30px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* start recipes added by profile  */
+.recipesAddedByme {
+  display: none;
+}
+.recipesAddedByme h3 {
+  font-family: "Pacifico", cursive;
+  text-transform: capitalize;
+  color: #fff;
+  text-align: center;
+  width: 75%;
+}
+/* end profile section  */

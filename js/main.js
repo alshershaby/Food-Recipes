@@ -37,9 +37,14 @@ $('#closeSign').click( ()=>{
     $("#joinSection").fadeOut(400,()=>{
         $("#searchRecipeBtn").removeClass("active");
         $("#viewAllRecipes").removeClass("active");
+        $("#addRecipeBtn").removeClass("active");
+        $("#addedRecipesBtn").removeClass("active");
+        $("#profileBtn").removeClass("active");
         $("#searchSection").fadeOut(400);
         $("#recipesByApi").fadeOut(400);
         $("#addRecipesSection").fadeOut(400);
+        $("#UsersAddedRecipesSection").fadeOut(400);
+        $("#profileSection").fadeOut(400);
         $("#overLanding").fadeOut(400,()=>{
         $("#closeSign").fadeOut(400,()=>{
             $("#joinBtn").fadeIn(400);
@@ -161,6 +166,71 @@ $("#addRecipeBtn").click( ()=>{
 
 
 // end add recipe 
+
+
+
+// start added recipes 
+
+$("#addedRecipesBtn").click( ()=>{
+    $("#usersAddedRecipesSection").siblings().fadeOut(400,()=>{
+    $("#addedRecipesBtn").addClass("active");
+    $("#addedRecipesBtn").siblings().removeClass("active");
+    $("#overLanding").fadeIn(700,()=>{
+     $("#usersAddedRecipesSection").fadeIn(400,()=>{
+        $("#joinBtn").fadeOut(400,()=>{
+            $("#closeSign").fadeIn(400);
+            $("#switcher").fadeOut(400);
+        })
+     });   
+    });
+
+    });
+} )
+
+
+
+// end added recipes 
+
+
+
+
+// start profile 
+$("#profileBtn").click( ()=>{
+    $("#profileSection").siblings().fadeOut(400,()=>{
+    $("#profileBtn").addClass("active");
+    $("#profileBtn").siblings().removeClass("active");
+    $("#overLanding").fadeIn(700,()=>{
+     $("#profileSection").fadeIn(400,()=>{
+        $("#joinBtn").fadeOut(400,()=>{
+            $("#closeSign").fadeIn(400);
+            $("#switcher").fadeOut(400);
+        })
+     });   
+    });
+
+    });
+} )
+
+
+
+
+function profileSwitcher(btn,content){
+    btn.click( ()=>{
+        btn.siblings().removeClass("active");
+        btn.addClass("active");
+
+        content.siblings().fadeOut(400);
+        content.delay(400).fadeIn(400);
+    })
+}
+
+profileSwitcher( $('#profiler'),$('#profileData') );
+
+profileSwitcher( $('#favoriter'),$('#profileFavorites')  );
+
+profileSwitcher( $('#myReciper'),$('#recipesAddedByme')  );
+
+// end profile 
 
 });
 
